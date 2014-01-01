@@ -1,0 +1,35 @@
+.thumb {
+height: 100px;
+border: 1px solid #000;
+position: absolute; 
+right: 0px;
+top: 0px; 
+visibility: hidden; 
+}
+
+.row {
+clear: both;
+}
+
+.cell {
+float: left; 
+width: 100px;
+height: 100px; 
+border: 2px solid grey;	
+border-spacing: 0px;
+border-collapse: collapse;
+}
+
+.kufr { 
+display: inline-block;
+border: 2px solid grey;
+}
+
+.kufr-wrap {
+padding: 10px; 
+text-align: center; 
+}
+
+.kufr-wrap2 {
+
+}

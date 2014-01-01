@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Kufr - hádání obrázků</title>
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script src="Scripts/kufr.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/kufr.css">
+</head>
+<body>
+    <form>
+        <input type="file" id="files" name="files[]" multiple /> <br />
+        <label for="rows">Řádku: </label>
+        <input type="number" class="rows" name="rows" value="4" style="width: 40px;" />
+        <label for="cols">Sloupců: </label>
+        <input type="number" class="cols" name="cols" value="4" style="width: 40px;" />
+        <label for="imgs">Obrázek: </label>
+        <input type="text" class="imgs" name="imgs" value="-" style="width: 40px;" />
+        <input type="button" onclick="showAll()" value="Ukázat vše" />
+        <input type="button" onclick="hideAll()" value="Skrýt vše" />
+        <input type="button" onclick="fileIndex-=2; showNextFile();" value="Předchozí obrázek" />
+        <input type="button" onclick="showNextFile()" value="Další obrázek" />
+        <output id="list">
+            <span><img class="thumb" /></span>
+        </output>
+        <script>
+            document.getElementById('files').addEventListener('change', handleFileSelect, false);
+        </script>
+    </form>
+    
+    <div class="kufr-wrap">
+        <div class="kufr-wrap2">
+            <div class="kufr">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
