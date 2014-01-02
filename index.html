@@ -16,15 +16,18 @@
         <input type="text" class="imgs" name="imgs" value="-" style="width: 40px;" />
         <input type="button" onclick="showAll()" value="Ukázat vše" />
         <input type="button" onclick="hideAll()" value="Skrýt vše" />
-        <input type="button" onclick="fileIndex-=2; showNextFile();" value="Předchozí obrázek" />
-        <input type="button" onclick="showNextFile()" value="Další obrázek" />
+        <input type="button" onclick="fileIndex-=2; showNextFile();" value="Předchozí obrázek" class="prev" />
+        <input type="button" onclick="showNextFile()" value="Další obrázek" class="next" />
+        <a href="https://github.com/j-maly/kufr.git">GitHub repository</a>
         <output id="list">
             <span><img class="thumb" /></span>
         </output>
-        <script>
-            document.getElementById('files').addEventListener('change', handleFileSelect, false);
+        <script type="text/javascript">
+            $("#files").on('change', handleFileSelect);
+            $(".rows").on('change', createGrid);
+            $(".cols").on('change', createGrid);
         </script>
-    </form>
+</form>
     
     <div class="kufr-wrap">
         <div class="kufr-wrap2">
